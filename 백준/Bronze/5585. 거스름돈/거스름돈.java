@@ -1,37 +1,32 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.*;
 
-public class Main{
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int num = Integer.parseInt(br.readLine());
-		int result = 1000 - num;
-		int cnt = 0;
-
-		while(result != 0) {
-			if (result >= 500) {
-				cnt += result / 500;
-				result = result % 500;
-			}else if(result >= 100) {
-				cnt += result / 100;
-				result = result % 100;
-			}else if(result >= 50) {
-				cnt += result / 50;
-				result = result % 50;
-			}else if (result >= 10) {
-				cnt += result / 10;
-				result = result % 10;
-			}else if (result >= 5) {
-				cnt += result / 5;
-				result = result % 5;
-			}else {
-				cnt += result / 1;
-				result = result % 1;
-			}	
-		}
-		System.out.println(cnt);
-	}
+        int payment = Integer.parseInt(br.readLine());
+        int cnt = 0;
+        
+        int change = 1000 - payment;
+        
+        cnt = change / 500;
+        change %= 500;
+        
+        cnt += change / 100;
+        change %= 100;
+        
+        cnt += change / 50;
+        change %= 50;
+        
+        cnt += change / 10;
+        change %= 10;
+        
+        cnt += change / 5;
+        change %= 5;
+        
+        cnt += change / 1;
+        change %= 1;
+        
+        System.out.println(cnt);
+    }
 }
