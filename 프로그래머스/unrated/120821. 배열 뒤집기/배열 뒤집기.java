@@ -1,11 +1,23 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int[] num_list) {
-        int[] reverse = new int[num_list.length];
+        List<Integer> list = new ArrayList<>();
         
-        for (int i = num_list.length - 1, j = 0; i >= 0; i--, j++) {
-            reverse[j] = num_list[i];   
-        }         
-    
-        return reverse;
+        for (int num : num_list) {
+            list.add(num);
+        }
+        
+        Collections.reverse(list);
+        
+        int[] reversedArray = new int[num_list.length];
+        for (int i = 0; i < num_list.length; i++) {
+            reversedArray[i] = list.get(i);
+        }
+        
+        return reversedArray;
     }
 }
