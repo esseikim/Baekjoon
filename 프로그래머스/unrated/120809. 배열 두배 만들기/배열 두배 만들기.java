@@ -2,12 +2,17 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] numbers) {
-        int[] doubledNumbers = new int[numbers.length];
+        List<Integer> list = new ArrayList<>();
         
-        for (int i = 0; i < numbers.length; i++) {
-            doubledNumbers[i] = numbers[i] * 2;
+        for (int num : numbers) {
+            list.add(num * 2);
         }
         
-        return doubledNumbers;
+        int[] result = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            result[i] = list.get(i);
+        }
+        
+        return result;
     }
 }
