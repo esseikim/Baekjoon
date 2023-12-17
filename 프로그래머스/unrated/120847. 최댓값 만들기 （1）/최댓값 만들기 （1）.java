@@ -1,11 +1,17 @@
-import java.util.Arrays;
-import java.util.Collections;
-
 class Solution {
     public int solution(int[] numbers) {
-        Integer[] sorted = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
-        Arrays.sort(sorted, Collections.reverseOrder());
+        int max1 = 0;
+        int max2 = 0;
 
-        return sorted[0] * sorted[1];
+        for (int num : numbers) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+        }
+
+        return max1 * max2;
     }
 }
