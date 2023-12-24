@@ -1,6 +1,10 @@
-SELECT I.NAME, I.DATETIME
-FROM ANIMAL_INS I, ANIMAL_OUTS O
-WHERE (I.ANIMAL_ID = O.ANIMAL_ID(+)) AND
-      O.ANIMAL_ID IS NULL
-ORDER BY DATETIME
-FETCH FIRST 3 ROW ONLY;
+SELECT name, datetime
+  FROM (SELECT i.name, i.datetime
+          FROM animal_ins i
+          LEFT JOIN animal_outs o
+            ON i.animal_id = o.animal_id
+         WHERE o.animal_id IS NULL
+         ORDER BY i.datetime ASC)
+ FETCH FIRST 3 ROWS ONLY;
+
+
