@@ -1,9 +1,18 @@
 public class Solution {
     public int solution(String my_string, String is_suffix) {
-        if (my_string.endsWith(is_suffix)) { // endsWith 메서드를 사용해 my_string의 끝이 is_suffix로 끝나는지 확인. endsWith는 불리언 값을 반환하며, true면 접미사인 것으로 간주
-            return 1;
-        } else {
+        int myStringLength = my_string.length();
+        int suffixLength = is_suffix.length();
+
+        if (myStringLength < suffixLength) {
             return 0;
         }
+
+        for (int i = 0; i < suffixLength; i++) { // 문자열 끝에서부터 시작해서 일치 여부를 확인
+            if (my_string.charAt(myStringLength - suffixLength + i) != is_suffix.charAt(i)) {
+                return 0;
+            }
+        }
+
+        return 1;
     }
 }
