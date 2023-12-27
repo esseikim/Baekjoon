@@ -1,24 +1,16 @@
 public class Solution {
     public int solution(int n, String control) {
-        char[] controlChars = control.toCharArray();
-        
-        for (char c : controlChars) {
-            switch (c) {
-                case 'w':
-                    n += 1;
-                    break;
-                case 's':
-                    n -= 1;
-                    break;
-                case 'd':
-                    n += 10;
-                    break;
-                case 'a':
-                    n -= 10;
-                    break;
+        for (char c : control.toCharArray()) {
+            if (c == 'w') {
+                n++;
+            } else if (c == 's') {
+                n--;
+            } else if (c == 'd') {
+                n += 10;
+            } else if (c == 'a') {
+                n -= 10;
             }
         }
-        
         return n;
     }
 }
