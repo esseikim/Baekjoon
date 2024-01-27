@@ -16,7 +16,7 @@
 --     B.AUTHOR_NAME,
 --     A.CATEGORY
 -- ORDER BY
---     B.AUTHOR_ID ASC,
+--     B.AUTHOR_ID ,
 --     A.CATEGORY DESC;
 
 
