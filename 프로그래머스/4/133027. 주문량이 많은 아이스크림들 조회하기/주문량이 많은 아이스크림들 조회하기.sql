@@ -12,8 +12,6 @@
 -- FETCH FIRST 3 ROWS ONLY;
 
 
-
-
 SELECT FLAVOR
 FROM
     (
