@@ -11,4 +11,9 @@ public class Solution {
         }
         return result.toString();
     }
+
+    public static void main(String[] args) {
+        System.out.println(solution("abcdevwxyz")); // 출력: "lllllvwxyz"
+        System.out.println(solution("jjnnllkkmm")); // 출력: "llnnllllmm"
+    }
 }
