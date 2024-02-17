@@ -14,7 +14,7 @@ public class Solution {
             result[index++] = n; // 변환된 값 추가
         }
         
-        // 결과 배열의 크기를 콜라츠 수열의 실제 길이에 맞게 조정합니다.
+        // 결과 배열의 크기를 콜라츠 수열의 실제 길이에 맞게 조정한다.
         int[] finalResult = new int[index];
         System.arraycopy(result, 0, finalResult, 0, index);
         return finalResult;
