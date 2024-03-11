@@ -1,5 +1,3 @@
-
-
 // class Solution {
 //     public int solution(int[] arr, int idx) {
         
@@ -11,7 +9,6 @@
 //      return -1;
 //     }
 // }
-
 
 class Solution {
     public int solution(int[] arr, int idx) {
