@@ -1,0 +1,37 @@
+// class Solution {
+//     public int solution(int[] arr, int idx) {
+//         int result = -1;
+
+//         for (int i = idx + 1; i < arr.length; i++) {
+//             if (arr[i] == 1) {
+//                 result = i;
+//                 break;
+//             }
+//         }
+
+//         return result;
+//     }
+// }
+
+
+// public class Solution {
+//     public static int solution(int[] arr, int idx) {
+//         for (int i = idx + 1; i < arr.length; i++) {
+//             if (arr[i] == 1) {
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+// }
+
+class Solution {
+    public int solution(int[] arr, int idx) {
+     for (int i = idx; i < arr.length; i++) {
+         if (arr[i] == 1) {
+             return i ;
+         }
+      }
+     return -1;
+    }
+}
